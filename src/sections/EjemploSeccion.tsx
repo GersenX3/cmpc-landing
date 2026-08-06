@@ -16,6 +16,7 @@ function EjemploSeccion() {
             description="Descripción breve del destino."
             href="https://www.cmpc.com"
           />
+          
         </div>
       </div>
     </section>
