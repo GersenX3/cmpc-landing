@@ -2,12 +2,13 @@ import { useState } from "react";
 import Layout from "./components/layout/Layout";
 import type { SidebarItem } from "./components/layout/Sidebar";
 import EjemploSeccion from "./sections/EjemploSeccion";
+import SeccionPrincipal from "./sections/SeccionPrincipal";
 
 // Cada entrada acá corresponde a un tab del sidebar.
 // A medida que se agreguen secciones reales, se suman aquí
 // y se registran en SECTION_COMPONENTS más abajo.
 const SIDEBAR_ITEMS: SidebarItem[] = [
-  { id: "ejemplo0", label: "Ejemplo0" },
+  { id: "Principal", label: "Principal" },
   { id: "ejemplo1", label: "Ejemplo1" },
   { id: "ejemplo2", label: "Ejemplo2" },
   { id: "ejemplo3", label: "Ejemplo3" },
@@ -15,7 +16,7 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
 ];
 
 const SECTION_COMPONENTS: Record<string, () => React.ReactElement> = {
-  ejemplo0: EjemploSeccion,
+  Principal: SeccionPrincipal,
   ejemplo1: EjemploSeccion,
   ejemplo2: EjemploSeccion,
   ejemplo3: EjemploSeccion,
