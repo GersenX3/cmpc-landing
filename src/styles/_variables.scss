@@ -1,0 +1,83 @@
+// =============================================
+// CMPC — Overrides de variables de Bootstrap
+// Se importan ANTES de "bootstrap/scss/bootstrap"
+// para que el framework compile usando estos valores.
+// =============================================
+
+// --- Paleta CMPC (extraída del sitio oficial) ---
+$verde:      #398336;
+$verde2:     #8AB525;
+$verde3:     #B6B77A;
+$verde4:     #66AB6C;
+$verde5:     #8FB64A;
+$celeste:    #3CC3FF;
+
+$gris1:  #C1C1C1;
+$gris2:  #F7F7F7;
+$gris3:  #D3D3D3;
+$gris4:  #707070;
+$gris5:  #E0E0E0;
+$gris6:  #F3F3F3;
+$gris7:  #F1F1F1;
+$gris8:  #F2F2F2;
+$gris9:  #EAEAEA;
+$gris10: #86989D;
+$gris11: #575756;
+$gris12: #f5f5f7;
+$gris13: #70706F;
+$gris14: #9DAFBD;
+$gris15: #4F5858;
+
+$negro1: #313131;
+$negro2: #2F4B52;
+$negro3: #1B2935;
+
+$cafe1: #C17A58;
+$cafe2: #B17E52;
+
+$naranjo1: #E07C75;
+$naranjo2: #CB9C5C;
+
+$azul1:    #3D4B61;
+$calipso1: #4294AA;
+$rojo1:    #B45C5B;
+$morado1:  #78527E;
+$amarillo1: #FEBD24;
+
+// --- Mapa de "theme colors" que Bootstrap usa para generar
+//     automáticamente .btn-*, .text-*, .bg-*, .border-*, etc. ---
+$theme-colors: (
+  "verde":     $verde,
+  "verde2":    $verde2,
+  "verde3":    $verde3,
+  "verde4":    $verde4,
+  "verde5":    $verde5,
+  "celeste":   $celeste,
+  "gris1":     $gris1,
+  "gris4":     $gris4,
+  "gris10":    $gris10,
+  "gris11":    $gris11,
+  "negro1":    $negro1,
+  "negro2":    $negro2,
+  "negro3":    $negro3,
+  "cafe1":     $cafe1,
+  "cafe2":     $cafe2,
+  "naranjo1":  $naranjo1,
+  "naranjo2":  $naranjo2,
+  "azul1":     $azul1,
+  "calipso1":  $calipso1,
+  "rojo1":     $rojo1,
+  "morado1":   $morado1,
+  "amarillo1": $amarillo1,
+);
+
+// --- Tipografía ---
+$font-family-base: "Archivo", sans-serif;
+$headings-font-family: "Noto Serif", serif;
+$headings-font-weight: 700;
+
+$body-color: $negro1;
+
+// --- Radios de borde (CMPC usa esquinas asimétricas puntuales,
+//     eso se maneja en _custom.scss, esto es solo el default) ---
+$border-radius: 0.375rem;

@@ -1,0 +1,71 @@
+// =============================================
+// CMPC — Clases propias que no vienen de Bootstrap
+// =============================================
+
+// --- Fuentes custom del sitio CMPC ---
+// Los archivos de fuente aún no fueron compartidos.
+// Cuando los tengas, colócalos en src/assets/fonts/
+// y descomenta lo siguiente:
+//
+// @font-face {
+//   font-family: "Heaters";
+//   src: url("../assets/fonts/Heaters.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+//
+// @font-face {
+//   font-family: "icomoon";
+//   src: url("../assets/fonts/icomoon.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// --- Bordes asimétricos (patrón recurrente en el sitio CMPC) ---
+.cmpc-borde-tl {
+  border-radius: 30px 0 0 0;
+}
+.cmpc-borde-br {
+  border-radius: 0 0 30px 0;
+}
+.cmpc-borde-pill-tl {
+  border-radius: 30px 0;
+}
+
+// --- Tarjeta base ---
+.cmpc-tarjeta {
+  background-color: $body-bg;
+  border: 1px solid $gris3;
+  border-radius: 30px 0px;
+  padding: 1.5rem;
+}
+
+// --- Sidebar de navegación ---
+.cmpc-sidebar {
+  min-height: 100vh;
+  background-color: $gris2;
+  border-right: 1px solid $gris5;
+}
+
+.cmpc-sidebar__link {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: $negro2;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $cafe1;
+    background-color: rgba($cafe1, 0.06);
+  }
+
+  &.active {
+    color: $cafe1;
+    border-left-color: $cafe1;
+    background-color: rgba($cafe1, 0.08);
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,17 @@
+// Google Fonts usadas por CMPC
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700&family=Noto+Serif:wght@400;700&display=swap");
+
+// 1. Overrides de variables (deben ir antes de importar bootstrap)
+@import "./variables";
+
+// 2. Bootstrap completo, ya compilado con nuestras variables
+@import "bootstrap/scss/bootstrap";
+
+// 3. Librerías de terceros
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "aos/dist/aos.css";
+
+// 4. Clases propias de CMPC
+@import "./custom";
