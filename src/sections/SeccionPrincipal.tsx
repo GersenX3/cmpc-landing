@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LinkCard from "../components/ui/LinkCard";
+import DaysCounter from "../components/ui/DaysCounter";
 
 interface CategoriaLink {
   title: string;
@@ -75,8 +76,12 @@ function SeccionPrincipal() {
   const categoria = CATEGORIAS.find((c) => c.id === activeCategoria)!;
 
   return (
-    <section>
-      <div className="cmpc-cat-tabs mb-5">
+  <section>
+    <div className="mb-5 d-flex justify-content-center">
+      <DaysCounter />
+    </div>
+
+    <div className="cmpc-cat-tabs mb-5">
         {CATEGORIAS.map((cat) => (
           <button
             key={cat.id}

@@ -78,4 +78,8 @@ Desktop.ini
 .pnpm-store/
 .npm/
 .yarn/
-```
+
+# Environment variables (contienen credenciales, nunca se suben)
+.env
+.env.local
+.env.*.local
