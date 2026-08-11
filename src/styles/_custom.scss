@@ -169,3 +169,68 @@
     font-weight: 700;
   }
 }
+
+// --- Tabs de categoría: fila, arriba a la derecha, ícono a la izquierda del texto ---
+.cmpc-cat-tabs {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cmpc-cat-tab {
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items:stretch;
+  gap: 0.5rem;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem 0;
+  color: $gris11;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+
+  i {
+    font-size: 1.1rem;
+    color: $gris11;
+    transition: color 0.2s ease;
+  }
+
+  span {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.active {
+    opacity: 1;
+
+    i {
+      color: $cafe1;
+    }
+
+    span {
+      color: $cafe1;
+    }
+
+    border-bottom: 3px solid $cafe1;
+  }
+}
+
+// --- Banner con fondo para el DaysCounter ---
+.cmpc-dias-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px 0;
+}

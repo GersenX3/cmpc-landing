@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LinkCard from "../components/ui/LinkCard";
 import DaysCounter from "../components/ui/DaysCounter";
+import fondoImg from "../assets/images/fondo.jpg";
 
 interface CategoriaLink {
   title: string;
@@ -67,21 +68,17 @@ const CATEGORIAS: Categoria[] = [
 
 /**
  * Sección "Seguridad, Salud y Medio Ambiente".
- * Tres tabs grandes y centrados (ícono + texto) que alternan
- * la grilla de LinkCard mostrada debajo. Estado interno, sin
- * afectar el sidebar principal.
+ * Tabs pequeños arriba a la derecha (ícono a la izquierda del texto)
+ * que alternan la grilla de LinkCard mostrada al final. El banner
+ * con el DaysCounter es fijo: no cambia según el tab activo.
  */
-function SeccionPrincipal() {
+function SeguridadSaludMedioAmbiente() {
   const [activeCategoria, setActiveCategoria] = useState(CATEGORIAS[0].id);
   const categoria = CATEGORIAS.find((c) => c.id === activeCategoria)!;
 
   return (
-  <section>
-    <div className="mb-5 d-flex justify-content-center">
-      <DaysCounter />
-    </div>
-
-    <div className="cmpc-cat-tabs mb-5">
+    <section>
+      <div className="cmpc-cat-tabs mb-4">
         {CATEGORIAS.map((cat) => (
           <button
             key={cat.id}
@@ -97,6 +94,13 @@ function SeccionPrincipal() {
         ))}
       </div>
 
+      <div
+        className="cmpc-dias-banner mb-5"
+        style={{ backgroundImage: `url(${fondoImg})` }}
+      >
+        <DaysCounter />
+      </div>
+
       <div className="row g-4">
         {categoria.links.map((link) => (
           <div className="col-12 col-sm-6 col-lg-4" key={link.title}>
@@ -108,4 +112,4 @@ function SeccionPrincipal() {
   );
 }
 
-export default SeccionPrincipal;
+export default SeguridadSaludMedioAmbiente;

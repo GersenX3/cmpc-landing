@@ -67,21 +67,17 @@ const CATEGORIAS: Categoria[] = [
 
 /**
  * Sección "Seguridad, Salud y Medio Ambiente".
- * Tres tabs grandes y centrados (ícono + texto) que alternan
- * la grilla de LinkCard mostrada debajo. Estado interno, sin
- * afectar el sidebar principal.
+ * Tabs pequeños arriba a la derecha (ícono a la izquierda del texto)
+ * que alternan la grilla de LinkCard mostrada al final. El banner
+ * con el DaysCounter es fijo: no cambia según el tab activo.
  */
-function SeguridadSaludMedioAmbiente() {
+function SeccionPrincipal() {
   const [activeCategoria, setActiveCategoria] = useState(CATEGORIAS[0].id);
   const categoria = CATEGORIAS.find((c) => c.id === activeCategoria)!;
 
   return (
     <section>
-      <div className="mb-5 d-flex justify-content-center">
-        <DaysCounter />
-      </div>
-
-      <div className="cmpc-cat-tabs mb-5">
+      <div className="cmpc-cat-tabs mb-4">
         {CATEGORIAS.map((cat) => (
           <button
             key={cat.id}
@@ -97,6 +93,16 @@ function SeguridadSaludMedioAmbiente() {
         ))}
       </div>
 
+      <div
+        className="cmpc-dias-banner mb-5"
+        style={{ backgroundImage: "url(/fondo.jpg)" }}
+      >
+        <DaysCounter />
+        {/* <h1
+        style={{ color: "white", textShadow: "2px 2px 2px rgba(0, 0, 0, 0.7)", fontSize: "2rem", marginTop: "1rem", padding: "0.5rem" }}
+        >Trabajamos por tu seguridad, salud y el medio ambiente</h1> */}
+      </div>
+
       <div className="row g-4">
         {categoria.links.map((link) => (
           <div className="col-12 col-sm-6 col-lg-4" key={link.title}>
@@ -108,4 +114,4 @@ function SeguridadSaludMedioAmbiente() {
   );
 }
 
-export default SeguridadSaludMedioAmbiente;
+export default SeccionPrincipal;
